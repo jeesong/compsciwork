@@ -14,14 +14,12 @@ class TreeNode
     if @value > new_value
       if @left.nil?
         @left = TreeNode.new(new_value)
-        # node = node.left
       else
         @left.store(new_value) ## Need to review this
       end
     elsif @value < new_value
       if @right.nil?
         @right = TreeNode.new(new_value)
-        # node = node.right
       else
         @right.store(new_value)
       end
