@@ -8,8 +8,7 @@ schedule = {"Monday"=> {"Morning"=> nil, "Afternoon"=> nil},
             "Thur"=> {"Morning"=> nil, "Afternoon"=> nil},
             "Fri"=> {"Morning"=> nil, "Afternoon"=> nil},
             "Sat"=> {"Morning"=> nil, "Afternoon"=> nil},
-            "Sun"=> {"Morning"=> nil, "Afternoon"=> nil}
-            }
+            "Sun"=> {"Morning"=> nil, "Afternoon"=> nil}}
 
 schedule.each do |day, time|
   time["Morning"] = developers.sample
