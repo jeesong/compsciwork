@@ -10,23 +10,36 @@ def fibonacci(n)
 end
 
 # Prime Numbers
-def prime(array)
-  # prime_array = []
-  array.each do |x|
-    stopper = x-1
-    if x < 2
-      array.delete(x)
-    end
-    for d in 2..stopper
-      # binding.pry
-      if (x % d) == 0
-        binding.pry
-        array.delete(x)
-      end
-    end
-  end
-  # prime_array
-end
+# def prime(array)
+#   # prime_array = []
+#   array.each do |x|
+#     stopper = x-1
+#     if x < 2
+#       array.delete(x)
+#     end
+#     for d in 2..stopper
+#       # binding.pry
+#       if (x % d) == 0
+#         binding.pry
+#         array.delete(x)
+#       end
+#     end
+#   end
+#   # prime_array
+# end
+# n = 1
+# while n < 100
+#   n += 1
+#   prime = true
+#   for i in 2..n-1
+#     if n % i == 0
+#       prime = false
+#     end
+#   end
+#   if prime
+#     puts n
+#   end
+# end
 
 
 def is_prime n
@@ -97,6 +110,23 @@ def input_pattern(pattern)
   end
   new_pattern.join
 end
+
+## Alternative solution
+# input = "AAASSSDDDDRDDSASSDDDSSSAD".split(//)
+# x = 0
+# counter = 1
+# while x < input.length
+#   if input[x] == input[x+1]
+#     counter=counter+1
+#   else
+#     if counter > 1
+#       print counter
+#     end
+#     print input[x]
+#     counter=1
+#   end
+#   x+=1
+# end
 ## Printing 12x12
 
 x = (1..12)
