@@ -92,33 +92,56 @@
 ////////////////////////////////////////////////////
 // Problem # 4
 
-var palindrome = function(x) {
-  var string_array = [];
-  x = x.toString();
-  string_array = x.split("");
-  for (var i = 0; i < string_array.length; i++) {
-    if (string_array[i] == string_array[string_array.length-1]) {
-      string_array.pop();
-    }
-    else {
-      return false;
-    }
-  }
-  return true;
-}
+// var palindrome = function(x) {
+//   var string_array = [];
+//   x = x.toString();
+//   string_array = x.split("");
+//   for (var i = 0; i < string_array.length; i++) {
+//     if (string_array[i] == string_array[string_array.length-1]) {
+//       string_array.pop();
+//     }
+//     else {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-for (var x = 999; x > 0; x--) {
-  for (var y = 999; y > 0; y--) {
-    if (palindrome(x*y) == true) {
-      console.log(x + " x " + y + " = " + x*y);
-      break;
-    }
-    // break; // this will only evaluate y = 999
-  }
-  // break; // this will only evaluate x = 999
-}
+// for (var x = 999; x > 0; x--) {
+//   for (var y = 999; y > 0; y--) {
+//     if (palindrome(x*y) == true) {
+//       console.log(x + " x " + y + " = " + x*y);
+//       break;
+//     }
+//     // break; // this will only evaluate y = 999
+//   }
+//   // break; // this will only evaluate x = 999
+// }
 
 // console.log(palindrome(2*126));
 
 ////////////////////////////////////////////////////
 // Problem # 5
+
+var smallest_multiple = function(x) {
+  var multiple = 20;
+  while (multiple > 0) {
+    if ((x % multiple) == 0 ) {
+      multiple--;
+    }
+    else {
+      return false;
+      break;
+    }
+  }
+  if (multiple == 0) {
+    return true;
+  }
+}
+
+for (var x = 1; x < 999999999; x++) {
+  if (smallest_multiple(x) == true ) {
+    console.log(x);
+    break;
+  }
+}
