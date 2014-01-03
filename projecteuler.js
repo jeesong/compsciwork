@@ -173,3 +173,35 @@
 ////////////////////////////////////////////////////
 // Problem # 7
 
+var is_prime = function(x) {
+  var prime = true;
+  if (x>2 && x % 2 == 0) {
+    prime = false;
+  }
+  else {
+    for (var i=2; i<(x/2); i++) {
+      if (x % i == 0) {
+        prime = false;
+      }
+    }
+  }
+  return prime;
+}
+
+var first_n_prime = function(x) {
+  var counter = 0;
+  var n_prime = [];
+  for (var i=2; i < 500000; i++) {
+    if (is_prime(i) == true) {
+      n_prime.push(i);
+    }
+    if (n_prime.length == x) {
+      break;
+    }
+  }
+    // counter++;
+  return n_prime;
+  // console.log(n_prime.length);
+}
+
+console.log(first_n_prime(10001));
