@@ -173,35 +173,81 @@
 ////////////////////////////////////////////////////
 // Problem # 7
 
-var is_prime = function(x) {
-  var prime = true;
-  if (x>2 && x % 2 == 0) {
-    prime = false;
+// var is_prime = function(x) {
+//   var prime = true;
+//   if (x>2 && x % 2 == 0) {
+//     prime = false;
+//   }
+//   else {
+//     for (var i=2; i<(x/2); i++) {
+//       if (x % i == 0) {
+//         prime = false;
+//       }
+//     }
+//   }
+//   return prime;
+// }
+
+// var first_n_prime = function(x) {
+//   var counter = 0;
+//   var n_prime = [];
+//   for (var i=2; i < 500000; i++) {
+//     if (is_prime(i) == true) {
+//       n_prime.push(i);
+//     }
+//     if (n_prime.length == x) {
+//       break;
+//     }
+//   }
+//   return n_prime;
+// }
+
+// answer = first_n_prime(10001);
+// console.log(answer[10000]);
+
+// var isPrime = function(x) {
+//   if (x === 2) {
+//     return true;
+//   }
+//   if (x % 2 == 0) {
+//     return false;
+//   }
+//   else {
+//     for (var i = 3; i <= Math.round(Math.sqrt(x)); i += 2)
+//       if (x % i == 0) {
+//         return false;
+//       }
+//   }
+//   return true;
+// }
+
+// console.log("2 " + isPrime(2))
+// console.log("3 " + isPrime(3))
+// console.log("4 " + isPrime(4))
+// console.log("5 " + isPrime(5))
+// console.log("6 " + isPrime(6))
+// console.log("7 " + isPrime(7))
+// console.log("8 " + isPrime(8))
+// console.log("9 " + isPrime(9))
+// console.log("10 " + isPrime(10))
+// console.log("11 " + isPrime(11))
+// console.log("12 " + isPrime(12))
+// console.log("27 " + isPrime(27))
+// console.log("31 " + isPrime(31))
+
+
+////////////////////////////////////////////////////
+// Problem # 8
+// var digits = "023456089012345".split("").map(Number);
+var digits = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450".split("").map(Number);
+var max = 0;
+for (var i = 0; i < digits.length - 4; i++) {
+  var fiveconsecutive = digits[i]*digits[i+1]*digits[i+2]*digits[i+3]*digits[i+4];
+  if (fiveconsecutive > max ) {
+    max = fiveconsecutive;
   }
-  else {
-    for (var i=2; i<(x/2); i++) {
-      if (x % i == 0) {
-        prime = false;
-      }
-    }
-  }
-  return prime;
 }
 
-var first_n_prime = function(x) {
-  var counter = 0;
-  var n_prime = [];
-  for (var i=2; i < 500000; i++) {
-    if (is_prime(i) == true) {
-      n_prime.push(i);
-    }
-    if (n_prime.length == x) {
-      break;
-    }
-  }
-    // counter++;
-  return n_prime;
-  // console.log(n_prime.length);
-}
 
-console.log(first_n_prime(10001));
+console.log(max);
+
