@@ -123,25 +123,52 @@
 ////////////////////////////////////////////////////
 // Problem # 5
 
-var smallest_multiple = function(x) {
-  var multiple = 20;
-  while (multiple > 0) {
-    if ((x % multiple) == 0 ) {
-      multiple--;
-    }
-    else {
-      return false;
-      break;
-    }
-  }
-  if (multiple == 0) {
-    return true;
-  }
+// var smallest_multiple = function(x) {
+//   var multiple = 20;
+//   while (multiple > 0) {
+//     if ((x % multiple) == 0 ) {
+//       multiple--;
+//     }
+//     else {
+//       return false;
+//       break;
+//     }
+//   }
+//   if (multiple == 0) {
+//     return true;
+//   }
+// }
+
+// for (var x = 1; x < 999999999; x++) {
+//   if (smallest_multiple(x) == true ) {
+//     console.log(x);
+//     break;
+//   }
+// }
+
+////////////////////////////////////////////////////
+// Problem # 6
+
+var sum_square = 0
+var square_sum = 0
+
+for (var i = 1; i <= 100; i++) {
+  sum_square += Math.pow(i,2);
+  square_sum += i;
+  // sum_square += i*i;
+  // console.log(sum_square);
+  // return sum_square;
 }
 
-for (var x = 1; x < 999999999; x++) {
-  if (smallest_multiple(x) == true ) {
-    console.log(x);
-    break;
-  }
-}
+// for (var i=1; i <= 100; i++) {
+//   square_sum += i;
+//   // console.log(square_sum);
+//   // return square_sum * square_sum;
+// }
+
+// console.log(sum_square);
+// console.log(square_sum * square_sum);
+console.log(square_sum*square_sum + " - " + sum_square + " = " + parseInt(square_sum*square_sum - sum_square));
+
+////////////////////////////////////////////////////
+// Problem # 7
