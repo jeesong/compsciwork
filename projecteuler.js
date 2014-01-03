@@ -149,26 +149,27 @@
 ////////////////////////////////////////////////////
 // Problem # 6
 
-var sum_square = 0
-var square_sum = 0
+// var sum_square = 0
+// var square_sum = 0
 
-for (var i = 1; i <= 100; i++) {
-  sum_square += Math.pow(i,2);
-  square_sum += i;
-  // sum_square += i*i;
-  // console.log(sum_square);
-  // return sum_square;
-}
-
-// for (var i=1; i <= 100; i++) {
+// for (var i = 1; i <= 100; i++) {
+//   sum_square += Math.pow(i,2);
 //   square_sum += i;
-//   // console.log(square_sum);
-//   // return square_sum * square_sum;
+//   // sum_square += i*i;
+//   // console.log(sum_square);
+//   // return sum_square;
 // }
 
-// console.log(sum_square);
-// console.log(square_sum * square_sum);
-console.log(square_sum*square_sum + " - " + sum_square + " = " + parseInt(square_sum*square_sum - sum_square));
+// // for (var i=1; i <= 100; i++) {
+// //   square_sum += i;
+// //   // console.log(square_sum);
+// //   // return square_sum * square_sum;
+// // }
+
+// // console.log(sum_square);
+// // console.log(square_sum * square_sum);
+// console.log(square_sum*square_sum + " - " + sum_square + " = " + parseInt(square_sum*square_sum - sum_square));
 
 ////////////////////////////////////////////////////
 // Problem # 7
+
